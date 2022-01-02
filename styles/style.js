@@ -39,5 +39,16 @@ export const styles = StyleSheet.create({
         color: "#000",
         marginLeft: 40,
         padding: 10
+    },
+    imageContainer: {
+        flexDirection: "row",
+        marginTop: 30,
+    }, 
+    imageView: {
+        width: width / 2.5,
+        height: height / 3.5,
+        borderWidth: 1,
+        borderColor: "#000",
+        marginHorizontal: 15
     }
 });

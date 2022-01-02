@@ -1,22 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View, Image } from 'react-native';
-import Input from './components/Input';
-import { styles } from "./styles/style";
+import React, { Component } from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import MainScreen from './screens/mainScreen';
 
-export default function App() {
-  return (
-    <View>
-      <SafeAreaView style={styles.header}>
-        <View style={{ flex: 0.6, paddingTop: 20 }}>
-          <Text style={styles.headerText}>Find Your Next Trip!</Text>
-        </View>
-        <View style={{ flex: 0.35, alignItems: 'flex-end', paddingTop: 20 }}>
-          <Image source={require("./assets/images/default.jpg")} style={styles.headerImage}></Image>
-        </View>
-      </SafeAreaView>
-      <View style={styles.textCenter}>
-        <Input placeholder="search"/>
-      </View>
-    </View>
-  );
+const { Navigator, Screen } = createStackNavigator();
+
+export default class App extends Component {
+  render() {
+    return(
+      <NavigationContainer>
+        <Navigator screenOptions={{headerShadow: false}}>
+          <Screen name="mainScreen" component={MainScreen}></Screen>
+        </Navigator>
+      </NavigationContainer>
+    );
+  }
 }
