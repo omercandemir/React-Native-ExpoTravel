@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, View, Image } from 'react-native';
+import Input from './components/Input';
 import { styles } from "./styles/style";
 
 export default function App() {
@@ -13,6 +14,9 @@ export default function App() {
           <Image source={require("./assets/images/default.jpg")} style={styles.headerImage}></Image>
         </View>
       </SafeAreaView>
+      <View style={styles.textCenter}>
+        <Input placeholder="search"/>
+      </View>
     </View>
   );
 }
