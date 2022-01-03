@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { Component } from 'react';
-import { SafeAreaView, StyleSheet, Text, View, Image } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import ImageButton from '../components/ImageButton';
 import Input from '../components/Input';
 import { styles } from "../styles/style";
@@ -20,7 +20,7 @@ export default class MainScreen extends Component {
 
   render() {
     return (
-      <View>
+      <ScrollView style={{marginBottom: 15}}>
         <SafeAreaView style={styles.header}>
           <View style={{ flex: 0.6, paddingTop: 20 }}>
             <Text style={styles.headerText}>Find Your Next Trip!</Text>
@@ -33,26 +33,26 @@ export default class MainScreen extends Component {
           <Input placeholder="Search"/>
         </View>
         <View style={styles.imageContainer}>
-          <View style={styles.imageView}>
-            <Image source={require("../assets/images/amsterdam.jpeg")} style={styles.image} />
-            <ImageButton onPress={() => this.props.navigation.navigate('locationDetail')} title="Amsterdam" description="Beatiful place" />
+            <View style={styles.imageView}>
+              <Image source={require("../assets/images/amsterdam.jpeg")} style={styles.image} />
+              <ImageButton onPress={() => this.props.navigation.navigate('locationDetail')} title="Amsterdam" description="Beatiful place" />
+            </View>
+            <View style={styles.imageView}>
+              <Image source={require("../assets/images/istanbul.jpeg")} style={styles.image} />
+              <ImageButton title="Istanbul" description="Beatiful place" />
+            </View>
           </View>
-          <View style={styles.imageView}>
-            <Image source={require("../assets/images/istanbul.jpeg")} style={styles.image} />
-            <ImageButton title="Istanbul" description="Beatiful place" />
+          <View style={styles.imageContainer}>
+            <View style={styles.imageView}>
+              <Image source={require("../assets/images/skyline.jpeg")} style={styles.image} />
+              <ImageButton title="Texas" description="Beatiful place" />
+            </View>
+            <View style={styles.imageView}>
+              <Image source={require("../assets/images/londra.jpeg")} style={styles.image} />
+              <ImageButton title="Londra" description="Beatiful place" />
+            </View>
           </View>
-        </View>
-        <View style={styles.imageContainer}>
-          <View style={styles.imageView}>
-            <Image source={require("../assets/images/skyline.jpeg")} style={styles.image} />
-            <ImageButton title="Texas" description="Beatiful place" />
-          </View>
-          <View style={styles.imageView}>
-            <Image source={require("../assets/images/londra.jpeg")} style={styles.image} />
-            <ImageButton title="Londra" description="Beatiful place" />
-          </View>
-        </View>
-      </View>
+      </ScrollView>
     );
   }
 }

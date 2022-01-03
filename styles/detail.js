@@ -19,6 +19,10 @@ export const styles = StyleSheet.create({
         color: "white",
         fontSize: 20,
         marginVertical: 10
+    },
+    cardView: {
+        height: height,
+        width: width
     }
     
 });

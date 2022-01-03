@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Animated, ImageBackground, View, Dimensions, Text, ScrollView} from 'react-native';
-import { Easing } from 'react-native-reanimated';
 import { styles } from '../styles/detail';
 import Card from "../components/Card";
 
@@ -16,7 +15,7 @@ export default class LocationDetail extends Component {
         Animated.timing(this.state.alignment, {
             toValue: height / 3,
             duration: 800,
-            easing: Easing.back()
+            useNativeDriver: false
         }).start();
     }
 
@@ -42,7 +41,7 @@ export default class LocationDetail extends Component {
                 </Animated.View>
                 <View style={styles.cardView}>
                     <ScrollView>
-                        <Card title="British Museum" />
+                        <Card title="British Museum" location="Londra" description="The British Museum is a public institution dedicated to human history, art and culture located in the Bloomsbury area of London, England." />
                     </ScrollView>
                 </View>
             </View>

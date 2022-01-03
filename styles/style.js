@@ -2,7 +2,8 @@ import { Dimensions, StyleSheet } from 'react-native';
 const { width, height } = Dimensions.get('screen');
 export const styles = StyleSheet.create({
     header: {
-        flexDirection: "row"
+        flexDirection: "row",
+        marginTop: 10
     },
     headerText: {
         fontSize: 45,
@@ -82,8 +83,20 @@ export const styles = StyleSheet.create({
         height: "100%"
     },
     card: {
+        marginVertical: 20,
         backgroundColor: "#fff",
-        borderWidth: 1,
-        borderColor: "#000"
+        paddingVertical: 8,
+        paddingHorizontal: 15,
+        width: width / 1.1,
+        marginHorizontal: 20,
+        borderRadius: 20,
+
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 2,
+            height: 2
+        },
+        shadowOpacity: 0.3,
+        shadowRadius: 1.5
     }
 });
