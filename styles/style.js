@@ -83,13 +83,15 @@ export const styles = StyleSheet.create({
         height: "100%"
     },
     card: {
-        marginVertical: 20,
+        marginVertical: 10,
         backgroundColor: "#fff",
         paddingVertical: 8,
         paddingHorizontal: 15,
         width: width / 1.1,
         marginHorizontal: 20,
         borderRadius: 20,
+
+        height: height / 8,
 
         shadowColor: '#000',
         shadowOffset: {
@@ -98,5 +100,24 @@ export const styles = StyleSheet.create({
         },
         shadowOpacity: 0.3,
         shadowRadius: 1.5
+    },
+    cardTitle: {
+        fontWeight: "bold",
+        fontSize: 16,
+        marginLeft: 10
+    },
+    cardLocation: {
+        fontSize: 12,
+        color: "#777",
+        marginLeft: 10
+    },
+    cardDescription: {
+        fontSize: 12,
+        marginVertical: 5,
+        marginLeft: 10
+    },
+    cardImage: {
+        padding: 0,
+        flex: 0.3
     }
 });

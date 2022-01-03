@@ -39,17 +39,17 @@ export default class MainScreen extends Component {
             </View>
             <View style={styles.imageView}>
               <Image source={require("../assets/images/istanbul.jpeg")} style={styles.image} />
-              <ImageButton title="Istanbul" description="Beatiful place" />
+              <ImageButton onPress={() => this.props.navigation.navigate('locationDetail')} title="Istanbul" description="Beatiful place" />
             </View>
           </View>
           <View style={styles.imageContainer}>
             <View style={styles.imageView}>
               <Image source={require("../assets/images/skyline.jpeg")} style={styles.image} />
-              <ImageButton title="Texas" description="Beatiful place" />
+              <ImageButton onPress={() => this.props.navigation.navigate('locationDetail')} title="Texas" description="Beatiful place" />
             </View>
             <View style={styles.imageView}>
               <Image source={require("../assets/images/londra.jpeg")} style={styles.image} />
-              <ImageButton title="Londra" description="Beatiful place" />
+              <ImageButton onPress={() => this.props.navigation.navigate('locationDetail')} title="Londra" description="Beatiful place" />
             </View>
           </View>
       </ScrollView>

@@ -41,7 +41,30 @@ export default class LocationDetail extends Component {
                 </Animated.View>
                 <View style={styles.cardView}>
                     <ScrollView>
-                        <Card title="British Museum" location="Londra" description="The British Museum is a public institution dedicated to human history, art and culture located in the Bloomsbury area of London, England." />
+                        <Card
+                         title="British Museum"
+                         location="Londra" 
+                         description="The British Museum is a public institution dedicated to human history."
+                         image={require("../assets/images/museum.jpeg")} 
+                        />
+                        <Card
+                         title="British Museum"
+                         location="Londra" 
+                         description="The British Museum is a public institution dedicated to human history."
+                         image={require("../assets/images/museum.jpeg")} 
+                        />
+                        <Card
+                         title="British Museum"
+                         location="Londra" 
+                         description="The British Museum is a public institution dedicated to human history."
+                         image={require("../assets/images/museum.jpeg")} 
+                        />
+                        <Card
+                         title="British Museum"
+                         location="Londra" 
+                         description="The British Museum is a public institution dedicated to human history."
+                         image={require("../assets/images/museum.jpeg")} 
+                        />
                     </ScrollView>
                 </View>
             </View>
