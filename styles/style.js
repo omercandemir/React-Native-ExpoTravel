@@ -76,5 +76,14 @@ export const styles = StyleSheet.create({
         color: "white",
         marginVertical: 3,
         textAlign: "center"
+    },
+    backgroundImage: {
+        width: "100%",
+        height: "100%"
+    },
+    card: {
+        backgroundColor: "#fff",
+        borderWidth: 1,
+        borderColor: "#000"
     }
 });

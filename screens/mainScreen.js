@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { Component } from 'react';
-import { SafeAreaView, StyleSheet, Text, View, Image, Animated } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, Image } from 'react-native';
 import ImageButton from '../components/ImageButton';
 import Input from '../components/Input';
 import { styles } from "../styles/style";
@@ -35,7 +35,7 @@ export default class MainScreen extends Component {
         <View style={styles.imageContainer}>
           <View style={styles.imageView}>
             <Image source={require("../assets/images/amsterdam.jpeg")} style={styles.image} />
-            <ImageButton title="Amsterdam" description="Beatiful place" />
+            <ImageButton onPress={() => this.props.navigation.navigate('locationDetail')} title="Amsterdam" description="Beatiful place" />
           </View>
           <View style={styles.imageView}>
             <Image source={require("../assets/images/istanbul.jpeg")} style={styles.image} />
