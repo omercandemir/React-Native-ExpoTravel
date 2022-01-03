@@ -6,10 +6,12 @@ import MainScreen from './screens/mainScreen';
 const { Navigator, Screen } = createStackNavigator();
 
 export default class App extends Component {
-  render() {
+  render(){
     return(
       <NavigationContainer>
-        <Navigator screenOptions={{headerShadow: false}}>
+        <Navigator screenOptions={{
+          headerShown: false
+        }}>
           <Screen name="mainScreen" component={MainScreen}></Screen>
         </Navigator>
       </NavigationContainer>

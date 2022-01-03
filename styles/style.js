@@ -45,10 +45,36 @@ export const styles = StyleSheet.create({
         marginTop: 30,
     }, 
     imageView: {
-        width: width / 2.5,
+        width: width / 2.4,
         height: height / 3.5,
-        borderWidth: 1,
-        borderColor: "#000",
-        marginHorizontal: 15
+        marginHorizontal: 10
+    },
+    
+    image: {
+        width: "100%",
+        height: "100%",
+        borderRadius: 20
+    },
+    imageButton: {
+        backgroundColor: "rgba(0,0,0,0.5)",
+        width: "100%",
+        height: "30%",
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        borderBottomRightRadius: 20,
+        borderBottomLeftRadius: 20
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: "bold",
+        color: "white",
+        textAlign: "center"
+    },
+    description: {
+        fontSize: 16,
+        color: "white",
+        marginVertical: 3,
+        textAlign: "center"
     }
 });
